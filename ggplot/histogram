@@ -1,0 +1,16 @@
+template <-   theme(
+    plot.title = element_text(size = 14, hjust = 0.5),
+    axis.title.y = element_text(size = 12, vjust = +0.2),
+    axis.title.x = element_text(size = 12, vjust = -0.2),
+    axis.text.y = element_text(size = 10),
+    axis.text.x = element_text(size = 10)
+  )
+
+ggplot(DATAFRAME, aes(x = VARIABLE, y=..density..)) + 
+  geom_histogram(binwidth = 0.02, color = "black", alpha = 0.9) + 
+  geom_density(color = 'red') +
+  ylab("Y LABEL") + 
+  xlab("X LABEL") + 
+  ggtitle('TITTLE') +
+  template
+
